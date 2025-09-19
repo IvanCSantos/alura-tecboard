@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+.cards-eventos {
+  display: flex;
+  gap: 20px;
+}

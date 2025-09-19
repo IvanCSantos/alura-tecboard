@@ -1,0 +1,9 @@
+.titulo-tema {
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: 10%;
+}
