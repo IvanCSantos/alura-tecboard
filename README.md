@@ -20,7 +20,7 @@ Para executar o projeto, você precisa de:
 ## Como executar:
 
 - Clone o projeto em seu computador
-- Em um terminal, navegue até o diretório do projeto `cd diretorio-do projeto` e execute os comandos abaixo:
+- Em um terminal, navegue até o diretório do projeto `cd diretorio-do-projeto` e execute os comandos abaixo:
 
 ```bash
 npm install
