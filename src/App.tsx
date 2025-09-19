@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="container">
         <Banner />
         <FormularioEvento temas={temas} onSubmit={adicionarEvento} />
 

@@ -2,7 +2,13 @@ body {
   margin: 0;
 }
 
+.container {
+  padding: 0 25px;
+}
+
 .cards-eventos {
   display: flex;
   gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
 }
