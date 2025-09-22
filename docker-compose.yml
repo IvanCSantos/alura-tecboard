@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+    container_name: tecboard-frontend
+    restart: always
+    networks:
+      - alura-tecboard
+
+networks:
+  alura-tecboard:
+    driver: bridge
+    name: alura-tecboard
