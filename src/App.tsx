@@ -72,23 +72,31 @@ function App() {
         <Banner />
         <FormularioEvento temas={temas} onSubmit={adicionarEvento} />
 
-        {temas &&
-          Array.isArray(temas) &&
-          temas.map((tema) => (
-            <section key={tema.id} className="secao-eventos">
-              <Tema tema={tema} />
+        <section className="container">
+          {temas &&
+            Array.isArray(temas) &&
+            temas.map((tema) => {
+              if (!eventos.some((evento) => evento.tema.id == tema.id)) {
+                return null;
+              }
 
-              <div className="cards-eventos">
-                {eventos &&
-                  eventos.length > 0 &&
-                  eventos
-                    .filter((evento) => evento.tema.id === tema.id)
-                    .map((evento) => (
-                      <CardEvento evento={evento} key={evento.id} />
-                    ))}
-              </div>
-            </section>
-          ))}
+              return (
+                <section key={tema.id}>
+                  <Tema tema={tema} />
+
+                  <div className="eventos">
+                    {eventos &&
+                      eventos.length > 0 &&
+                      eventos
+                        .filter((evento) => evento.tema.id === tema.id)
+                        .map((evento) => (
+                          <CardEvento evento={evento} key={evento.id} />
+                        ))}
+                  </div>
+                </section>
+              );
+            })}
+        </section>
       </main>
     </>
   );
